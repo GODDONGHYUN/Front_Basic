@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>링크 및 이미지 HTML 요소</title>
+  </head>
+  <body>
+    <!--<a> : 하이퍼 링크를 사용하기 위한 요소 href 속성에 링크의 이동 경로를 작성 -->
+    <a href="https://naver.com">Naver</a>
+
+    <!--HTML의 속성 값으로 문자열을 지정할 때 따옴표가 없어도 인식되지만  예기치 못한 문제가 발생 할 수 있음-->
+    <a href=https://naver.com>Naver</a>
+
+    <!--a 요소의 href 속성 값으로 URL 주소뿐만 아니라 파일명(파일 경로), HTML의 ID 값도 올 수 있음-->
+    <a href="./link_next.html">다음 페이지 입니다</a>
+    <a href="#section1">Section1 으로 이동</a>
+    <h1 id = "section1">Section1</h1>
+    <div style = 'height: 500px; background-color:brown'></div>
+
+    <!--<img> : 이미지를 페이지에 출력하기 위한 요소 src속성으로 출력할 파일의 이미지 경로를 지정-->
+    <img src="./resource/img1.png" alt="귀여운 고라니">
+  </body>
+</html>
