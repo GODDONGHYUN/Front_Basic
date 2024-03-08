@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML 폼 요소</title>
   </head>
+
   <body>
     <!--
         '폼 요소'는 사용자로부터 입력을 받기 위해 사용되는 요소
         <form> 요소로 입력에 대한 양식을 지정함 <input> , <textarea>, <select> ,
         <checkbox> , <radio> name = "a" , <button> 등의 입력 양식 요소를 포함할 수 있음 
-        
     -->
 
     <!--<!--<input> : 사용자로부터 입력을 받는 기본적인 요소로 대부분 문자형태를 받을 때 사용됨 -->
@@ -50,5 +50,57 @@
     <input type="radio" name="a" />
     <input type="radio" name="a" />
     <input type="radio" name="a" />
+
+    <!--checkbox : 주어진 리스트 중에 복수를 선택할 수 있도록 함-->
+    <!--name : 하나의 값으로 인식-->
+    <input type="checkbox" name="c" />
+    <input type="checkbox" name="c" />
+    <input type="checkbox" name="c" />
+    <input type="checkbox" name="c" />
+    <input type="checkbox" name="c" />
+
+    <!--hidden : 화면에 출력하지 않음-->
+    <input type="hidden" />
+
+    <!--placeholder 속성  : 입력창의 설명을 포함-->
+    <input type="text" placeholder="설명입니다." />
+
+    <!--value 속성 : 입력창의 기본값을 지정-->
+    <input type="text" value="안녕" />
+    <!--checkbox, radio, hidden 타입은 사용자가 input의 value를 변경할 수 없음-->
+    <input type="checkbox" value="체크박스1" />
+    체크박스1
+
+    <!--checked 속성 : checkbox, radio 타입에 대해서 초기 선택여부를 지정-->
+    <input type="checkbox" value="체크박스 1" checked />체크박스1
+    <input type="checkbox" value="체크박스2" />체크박스 2
+
+    <!-- readonly : 읽기 전용으로 입력창을 지정-->
+    <input type="text" value ="읽기 전용" readonly / >
+
+    <!--disabled : 사용하지 않는 입력창으로 지정-->
+    <input type="text" value="사용불가" disabled />
+
+    <br /><br /><br />
+    <!----------------------------------------------------------------------->
+    <!-- <select> : 주어진 리스트에서 특정 요소를 선택 할 때 사용하는 요소-->
+    <!--multiple 속성으로 다중 선택이 가능한 select 요소 생성가능  -->
+    <select name="" id="" multiple>
+      <!--<option> : 선택 할 수 있는 리스트의 항목을 만드는 요소-->
+      <!--<option> 요소의 컨텐츠는 실제 값이 아님, 실제 값은 value 속성으로 지정-->
+      <option value="apple">사과</option>
+      <option value="banana">바나나</option>
+      <option value="grape " selected>포도</option>
+    </select>
+    <br /><br /><br />
+    <!----------------------------------------------------------------------->
+    <!--<textarea> 요소 :  단순히 문자를 여러 줄에 걸쳐서 작성할 수 있도록 하는 요소-->
+    <!--rows, cols : textarea 요소의 기본 크기를 지정-->
+    <!--textarea 요소는 value를 사용하지 않고 시작 태그와 종료 태그 사이에 값을 지정-->
+    <textarea name="" id="" cols="2" rows="10">ㅎㅇ</textarea>
+    <br /><br /><br />
+    <!----------------------------------------------------------------------->
+    <!-- <button> 요소 : 사용자로부터 클릭 이벤트를 받을 수 있는 버튼 요소-->
+    <button onclick="alert('버튼 클릭!')">띵동</button>
   </body>
 </html>
