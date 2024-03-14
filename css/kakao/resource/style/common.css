@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "KakaoRegular";
+  src: url(../fonts/KakaoRegular.ttf);
+}
+
+@font-face {
+  font-family: "KakaoBold";
+  src: url(../fonts/KakaoBold.ttf);
+}
+
+* {
+  font-family: KakaoRegular, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-width: 1712px;
+}
+
+/* 메인 바디 CSS*/
+
+#wrapper {
+  width: 1712px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  flex-shrink: 0;
+}
+
+/* 타이틀 박스 */
+.title-box {
+  font-size: 52px;
+  line-height: 78px;
+  letter-spacing: -1px;
+  font-family: "KakaoBold" sans-serif;
+  font-weight: 900;
+}
+
+.title-box::before {
+  background-image: url(https://www.kakaocorp.com/page/ico_tit_service.gif);
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  background-size: 100%;
+  content: "";
+  vertical-align: top;
+}
+/*====================================*/
+
+/* 컨텐츠 박스 */
+.contents-box {
+  display: grid;
+  grid-template:
+    "communication business" 180px
+    "life-style shopping" 180px
+    "entertainment social" 180px
+    /1fr 1fr;
+  gap: 16px;
+}
+
+.content-card {
+  display: flex;
+  align-items: center;
+  padding-left: 64px;
+  padding-right: 64px;
+  justify-content: space-between;
+  background-color: rgba(240, 240, 240, 1);
+  border-radius: 24px;
+}
+
+.content-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.content-icons-box {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+.icon-button:hover {
+  cursor: pointer;
+}
+
+.more {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(240, 240, 240, 1);
+  text-align: center;
+  line-height: 56px;
+  font-size: 36px;
+}
+
+.more:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.kakaotalk {
+  background-image: url(" https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9424536018c00001.png");
+  background-size: 100%;
+}
+
+.daum {
+  background-image: url("https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png");
+  background-size: 100%;
+}
+
+.story {
+  background-image: url("https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png");
+  background-size: 100%;
+}
+/*====================================*/
+
+/* 서비스 전체 보기 박스 */
+.more-box {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+}
+
+.more-button {
+  display: flex;
+  width: 316px;
+  height: 76px;
+  background-color: rgba(240, 240, 240, 0.8);
+  font-size: 24px;
+  letter-spacing: -0.4px;
+  border-radius: 38px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.more-button:hover {
+  cursor: pointer;
+}
+
+.more-arrow {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 16px;
+  transition: background-color 0.4s ease;
+}
+
+.more-button:hover .more-arrow {
+  background-color: rgba(150, 150, 150, 1);
+}
+/*====================================*/
