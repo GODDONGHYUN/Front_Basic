@@ -20,7 +20,17 @@
         document.getElementById("result").innerText =
           Number(a.value) + Number(b.value);
       });
-      const minusbutton = document.getElementById("minus-button");
+    </script>
+
+    <script>
+      const minusButtonClieckEventHandler = () => {
+        const a = document.getElementById("a");
+        const b = document.getElementById("b");
+        document.getElementById("result").innerText =
+          Number(a.value) - Number(b.value);
+      };
+      const minusButton = document.getElementById("minus-button");
+      minusButton.addEventListener("click", minusButtonClieckEventHandler);
     </script>
   </body>
 </html>
