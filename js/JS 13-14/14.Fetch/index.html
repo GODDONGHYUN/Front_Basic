@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP 예제</title>
+  </head>
+  <body>
+    <script>
+      getLocalhost = async () => {
+        console.log("함수 시작");
+        try {
+          const response = await fetch("http://localhost:5500");
+          console.log(response);
+        } catch (error) {
+          console.error("오류 발생:", error);
+        }
+        console.log("함수 종료");
+      };
+
+      getLocalhost();
+    </script>
+  </body>
+</html>
