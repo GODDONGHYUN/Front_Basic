@@ -6,6 +6,7 @@
     <title>임대주택 가격 서비스</title>
     <link rel="stylesheet" href="style.css">
     <script src = "script.js"></script>
+
   <body>
         <div id="sign-in-wrapper">
             <div class = "sign-in-image-box"></div>
@@ -15,14 +16,18 @@
                     <div class="sign-in-contents">
                         <div class = "sign-in-input-container">
                             <div class = "input-box">
-                                <div class = "input-label">아이디</div>
-                                <div class = " input-content-box"></div>
+                                <div class = "input-label label">아이디</div>
+                                <div class = " input-content-box">
+                                    <input type="text" class="input" placeholder="아이디를 입력해주세요.">
+                                </div>
                                 <div class ="input-message"></div>
                             </div>
                             <div class = "input-box">
-                                <div class = "input-label">비밀번호</div>
-                                <div class = " input-content-box"></div>
-                                <div class ="input-message"></div>
+                                <div class = "input-label label">비밀번호</div>
+                                <div class = " input-content-box">
+                                    <input type="password" class="input" placeholder="비밀번호를 입력해주세요.">
+                                </div>
+                                <div class ="input-message error"> 로그인 정보가 일치하지 않습니다.</div>
                             </div>
                         </div>
                         <div class = "sign-in-button-container"></div>
