@@ -13,9 +13,9 @@ function onSignInButtonClickHandler(event) {
   }
 }
 
-function onSignUpLinkClickHandler(event) {
+const onSignUpLinkClickHandler = (event) => {
   window.location.href = "../sign-up";
-}
+};
 
 const signUpLinkElement = document.getElementById("sign-up-link");
 signUpLinkElement.addEventListener("click", onSignUpLinkClickHandler);
