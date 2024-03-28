@@ -9,6 +9,8 @@ let id = "",
   email = "",
   authNumber = "";
 let isDuplicate = true,
+  isPasswordPattern = false,
+  isEqualPassword = false,
   isEmail = false,
   isDuplicateEmail = true,
   isEqualAuthNumber = false;
@@ -28,6 +30,10 @@ const checkAuthNumberButtonElement = document.getElementById(
 );
 
 const idMessageElement = document.getElementById("id-message");
+const passwordMessageElement = document.getElementById("password-message");
+const passwordCheckMessageElement = document.getElementById(
+  "password-check-message"
+);
 const emailMessageElement = document.getElementById("email-message");
 const authNumberMessageElement = document.getElementById("auth-number-message");
 
@@ -44,10 +50,28 @@ function onIdInputHandler(event) {
 
 function onPasswordInputHandler(event) {
   password = event.target.value;
+  const passwordReg = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,13}$/;
+  isPasswordPattern = passwordReg.test(password);
+  if (!isPasswordPattern) {
+    passwordMessageElement.className = "input-message error";
+    passwordMessageElement.textContent =
+      "영문, 숫자를 혼용하여 8 ~ 13자 입력해주세요.";
+    return;
+  }
+  passwordMessageElement.className = "input-message";
+  passwordMessageElement.textContent = "";
 }
 
 function onPasswordCheckInputHandler(event) {
   passwordCheck = event.target.value;
+  isEqualPassword = password === passwordCheck;
+  if (!isEqualPassword) {
+    passwordCheckMessageElement.className = "input-message error";
+    passwordCheckMessageElement.textContent = "비밀번호가 일치하지 않습니다.";
+    return;
+  }
+  passwordCheckMessageElement.className = "input-message";
+  passwordCheckMessageElement.textContent = "";
 }
 
 function onEmailInputHandler(event) {
@@ -170,6 +194,8 @@ function setSignUpButton() {
     email &&
     authNumber &&
     !isDuplicate &&
+    isPasswordPattern &&
+    isEqualPassword &&
     isEmail &&
     !isDuplicateEmail &&
     isEqualAuthNumber;
